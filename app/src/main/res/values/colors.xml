@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- 主题色 -->
     <color name="primary">#FF6B35</color>
     <color name="primary_dark">#E55A2B</color>
-    
-    <!-- 背景色 -->
     <color name="background">#1A1A2E</color>
     <color name="surface">#16213E</color>
-    
-    <!-- 文字色 -->
+    <color name="surface_light">#1F2B47</color>
     <color name="text_primary">#FFFFFF</color>
     <color name="text_secondary">#B0B0B0</color>
     <color name="text_hint">#757575</color>
-    
-    <!-- 功能色 -->
-    <color name="success">#4CAF50</color>
+    <color name="vip_gold">#FFD700</color>
+    <color name="score_high">#FFD700</color>
+    <color name="score_mid">#4CAF50</color>
+    <color name="score_low">#2196F3</color>
 </resources>
