@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout 
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -15,92 +14,48 @@
         android:padding="16dp"
         android:gravity="center_vertical">
         
-        <androidx.appcompat.widget.SearchView
-            android:id="@+id/search_view"
+        <EditText
+            android:id="@+id/search_input"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:hint="搜索歌曲、歌手"
+            android:textColorHint="@color/text_hint"
+            android:textColor="@color/text_primary"
             android:background="@color/surface"
-            app:queryHint="搜索歌曲、歌手" />
-        
-        <Button
-            android:id="@+id/btn_cancel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="取消"
-            android:background="@android:color/transparent"
-            android:textColor="@color/primary" />
+            android:padding="12dp" />
         
     </LinearLayout>
     
     <!-- 搜索历史 -->
-    <LinearLayout
-        android:id="@+id/layout_history"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="搜索历史"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp"
+        android:padding="16dp" />
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_search_history"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
-        
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="搜索历史"
-                android:textColor="@color/text_primary"
-                android:textSize="16sp" />
-            
-            <TextView
-                android:id="@+id/tv_clear_history"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="清空"
-                android:textColor="@color/text_secondary"
-                android:textSize="14sp" />
-            
-        </LinearLayout>
-        
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_search_history"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp" />
-        
-    </LinearLayout>
+        android:paddingHorizontal="8dp" />
     
-    <!-- 搜索结果 -->
+    <!-- 热门搜索 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="热门搜索"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp"
+        android:padding="16dp"
+        android:layout_marginTop="16dp" />
+    
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_search_results"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone" />
-    
-    <!-- 热门搜索 -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
-        
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="热门搜索"
-            android:textColor="@color/text_primary"
-            android:textSize="16sp" />
-        
-        <com.google.android.flexbox.FlexboxLayout
-            android:id="@+id/flexbox_hot"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            app:flexWrap="wrap"
-            app:alignContent="flex_start" />
-        
-    </LinearLayout>
+        android:paddingHorizontal="8dp" />
     
 </LinearLayout>
