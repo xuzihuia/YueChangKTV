@@ -1,20 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">悦唱K歌</string>
+    
+    <!-- 底部导航 -->
     <string name="nav_home">首页</string>
     <string name="nav_category">分类</string>
     <string name="nav_search">搜索</string>
     <string name="nav_profile">我的</string>
+    
+    <!-- 首页 -->
     <string name="hot_songs">热门推荐</string>
     <string name="new_songs">新歌速递</string>
     <string name="free_songs">免费专区</string>
+    <string name="view_all">查看全部</string>
+    
+    <!-- 搜索 -->
     <string name="search_hint">搜索歌曲、歌手</string>
     <string name="search_history">搜索历史</string>
-    <string name="my_works">我的作品</string>
-    <string name="login">登录</string>
-    <string name="vip">VIP会员</string>
-    <string name="play">播放</string>
-    <string name="record">录音</string>
-    <string name="accompany">伴奏</string>
+    <string name="hot_search">热门搜索</string>
+    <string name="clear_history">清空历史</string>
+    
+    <!-- K歌 -->
+    <string name="sing_now">开始演唱</string>
     <string name="original">原唱</string>
+    <string name="accompany">伴奏</string>
+    <string name="record">录音</string>
+    <string name="stop_record">停止录音</string>
+    <string name="score">得分</string>
+    <string name="level_sss">SSS</string>
+    <string name="level_ss">SS</string>
+    <string name="level_s">S</string>
+    <string name="level_a">A</string>
+    <string name="level_b">B</string>
+    <string name="level_c">C</string>
+    
+    <!-- 用户 -->
+    <string name="login">登录</string>
+    <string name="logout">退出登录</string>
+    <string name="phone_number">手机号</string>
+    <string name="password">密码</string>
+    <string name="sms_code">验证码</string>
+    <string name="get_sms_code">获取验证码</string>
+    <string name="password_login">密码登录</string>
+    <string name="sms_login">短信登录</string>
+    <string name="switch_login_mode">切换登录方式</string>
+    <string name="vip">VIP会员</string>
+    <string name="my_works">我的作品</string>
+    <string name="my_favorites">我的收藏</string>
+    
+    <!-- 通用 -->
+    <string name="loading">加载中...</string>
+    <string name="load_failed">加载失败</string>
+    <string name="retry">重试</string>
+    <string name="confirm">确认</string>
+    <string name="cancel">取消</string>
+    <string name="save">保存</string>
+    <string name="delete">删除</string>
+    <string name="share">分享</string>
+    <string name="favorite">收藏</string>
+    <string name="unfavorite">取消收藏</string>
+    <string name="no_data">暂无数据</string>
+    <string name="network_error">网络连接失败</string>
+    <string name="press_again_exit">再按一次退出</string>
 </resources>

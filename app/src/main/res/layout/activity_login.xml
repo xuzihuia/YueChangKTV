@@ -20,36 +20,86 @@
         android:id="@+id/et_phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="手机号"
+        android:hint="@string/phone_number"
         android:textColorHint="@color/text_hint"
         android:textColor="@color/text_primary"
         android:inputType="phone"
         android:maxLength="11"
+        android:background="@color/surface"
+        android:padding="12dp"
         android:layout_marginTop="32dp" />
     
     <EditText
         android:id="@+id/et_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="密码"
+        android:hint="@string/password"
         android:textColorHint="@color/text_hint"
         android:textColor="@color/text_primary"
         android:inputType="textPassword"
+        android:background="@color/surface"
+        android:padding="12dp"
         android:layout_marginTop="16dp" />
     
-    <Button
-        android:id="@+id/btn_login"
+    <LinearLayout
+        android:id="@+id/layout_sms_code"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:visibility="gone">
+        
+        <EditText
+            android:id="@+id/et_sms_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/sms_code"
+            android:textColorHint="@color/text_hint"
+            android:textColor="@color/text_primary"
+            android:inputType="number"
+            android:maxLength="6"
+            android:background="@color/surface"
+            android:padding="12dp" />
+        
+        <TextView
+            android:id="@+id/btn_get_sms_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/get_sms_code"
+            android:textColor="@color/primary"
+            android:padding="12dp"
+            android:layout_marginStart="8dp"
+            android:background="@color/surface" />
+        
+    </LinearLayout>
+    
+    <TextView
+        android:id="@+id/btn_password_login"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
         android:text="@string/login"
+        android:textColor="@color/text_primary"
+        android:gravity="center"
+        android:background="@color/primary"
         android:layout_marginTop="24dp" />
     
-    <Button
+    <TextView
         android:id="@+id/btn_sms_login"
         android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="@string/sms_login"
+        android:textColor="@color/text_primary"
+        android:gravity="center"
+        android:background="@color/surface_light"
+        android:layout_marginTop="12dp" />
+    
+    <TextView
+        android:id="@+id/tv_switch_mode"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="短信登录"
-        android:layout_marginTop="12dp"
-        android:backgroundTint="@color/surface_light" />
+        android:text="@string/switch_login_mode"
+        android:textColor="@color/text_secondary"
+        android:layout_marginTop="16dp" />
     
 </LinearLayout>

@@ -1,10 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- 主主题 -->
     <style name="Theme.YueChangKtv" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
         <item name="android:windowBackground">@color/background</item>
         <item name="android:statusBarColor">@color/background</item>
         <item name="android:navigationBarColor">@color/background</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+    </style>
+    
+    <!-- 启动页主题 -->
+    <style name="Theme.YueChangKtv.Splash" parent="Theme.YueChangKtv">
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:windowFullscreen">false</item>
+    </style>
+    
+    <!-- 文字样式 -->
+    <style name="TextAppearance.Title">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="TextAppearance.Subtitle">
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    
+    <style name="TextAppearance.Body">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    
+    <!-- 按钮样式 -->
+    <style name="Widget.Button.Primary" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/primary</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+    
+    <style name="Widget.Button.Secondary" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/surface_light</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+    
+    <style name="Widget.Button.Vip" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/vip_gold</item>
+        <item name="android:textColor">@color/background</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+    
+    <!-- 卡片样式 -->
+    <style name="CardView.Song">
+        <item name="cardBackgroundColor">@color/surface</item>
+        <item name="cardCornerRadius">8dp</item>
+        <item name="cardElevation">4dp</item>
+    </style>
+    
+    <!-- 输入框样式 -->
+    <style name="EditText.Normal">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        <item name="android:background">@color/surface</item>
+        <item name="android:padding">12dp</item>
     </style>
 </resources>

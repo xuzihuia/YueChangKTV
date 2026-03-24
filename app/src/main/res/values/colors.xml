@@ -1,15 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- 主题色 -->
     <color name="primary">#FF6B35</color>
     <color name="primary_dark">#E55A2B</color>
+    <color name="primary_light">#FF8C5A</color>
+    <color name="accent">#FFD700</color>
+    
+    <!-- 背景色 -->
     <color name="background">#1A1A2E</color>
     <color name="surface">#16213E</color>
     <color name="surface_light">#1F2B47</color>
+    <color name="surface_dark">#0F1629</color>
+    
+    <!-- 文字色 -->
     <color name="text_primary">#FFFFFF</color>
     <color name="text_secondary">#B0B0B0</color>
     <color name="text_hint">#757575</color>
+    <color name="text_disabled">#666666</color>
+    
+    <!-- 功能色 -->
+    <color name="success">#4CAF50</color>
+    <color name="warning">#FFC107</color>
+    <color name="error">#F44336</color>
+    <color name="info">#2196F3</color>
+    
+    <!-- VIP -->
     <color name="vip_gold">#FFD700</color>
-    <color name="score_high">#FFD700</color>
-    <color name="score_mid">#4CAF50</color>
-    <color name="score_low">#2196F3</color>
+    <color name="vip_silver">#C0C0C0</color>
+    
+    <!-- 评分等级 -->
+    <color name="score_sss">#FFD700</color>
+    <color name="score_ss">#FFD700</color>
+    <color name="score_s">#FFD700</color>
+    <color name="score_a">#4CAF50</color>
+    <color name="score_b">#2196F3</color>
+    <color name="score_c">#9E9E9E</color>
+    <color name="score_d">#F44336</color>
+    
+    <!-- 透明度 -->
+    <color name="transparent">#00000000</color>
+    <color name="black_30">#4D000000</color>
+    <color name="black_50">#80000000</color>
+    <color name="black_70">#B3000000</color>
 </resources>
