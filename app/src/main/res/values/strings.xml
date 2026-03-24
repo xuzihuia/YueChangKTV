@@ -24,6 +24,8 @@
     <string name="sing_now">开始演唱</string>
     <string name="original">原唱</string>
     <string name="accompany">伴奏</string>
+    <string name="play">播放</string>
+    <string name="pause">暂停</string>
     <string name="record">录音</string>
     <string name="stop_record">停止录音</string>
     <string name="score">得分</string>
