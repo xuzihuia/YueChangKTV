@@ -1,20 +1,16 @@
 package com.yuechang.ktv.ui.fragment
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.yuechang.ktv.R
 import com.yuechang.ktv.data.mock.MockData
 
 class HomeFragment : Fragment() {
-    
-    private lateinit var recyclerView: RecyclerView
     
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -27,38 +23,18 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         
-        recyclerView = view.findViewById(R.id.rv_hot_songs)
-        recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        
+        // 动态添加歌曲列表
+        val songsContainer = view.findViewById<LinearLayout>(R.id.songs_container)
         val songs = MockData.getMockSongs()
-        recyclerView.adapter = SimpleSongAdapter(songs.take(5)) { song ->
-            // 点击事件
+        
+        for (song in songs) {
+            val songView = TextView(requireContext()).apply {
+                text = "${song.name} - ${song.artist}"
+                setTextColor(resources.getColor(R.color.text_primary, null))
+                textSize = 16f
+                setPadding(16, 16, 16, 16)
+            }
+            songsContainer?.addView(songView)
         }
     }
-}
-
-class SimpleSongAdapter(
-    private val songs: List<com.yuechang.ktv.data.local.entity.SongEntity>,
-    private val onItemClick: (com.yuechang.ktv.data.local.entity.SongEntity) -> Unit
-) : RecyclerView.Adapter<SimpleSongAdapter.ViewHolder>() {
-    
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val name: TextView = view.findViewById(R.id.tv_song_name)
-        val artist: TextView = view.findViewById(R.id.tv_artist)
-    }
-    
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_song, parent, false)
-        return ViewHolder(view)
-    }
-    
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val song = songs[position]
-        holder.name.text = song.name
-        holder.artist.text = song.artist
-        holder.itemView.setOnClickListener { onItemClick(song) }
-    }
-    
-    override fun getItemCount() = songs.size
 }

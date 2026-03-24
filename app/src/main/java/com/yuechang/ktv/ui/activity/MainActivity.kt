@@ -2,10 +2,9 @@ package com.yuechang.ktv.ui.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.setupWithNavController
+import androidx.fragment.app.Fragment
 import com.yuechang.ktv.R
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.yuechang.ktv.ui.fragment.HomeFragment
 
 class MainActivity : AppCompatActivity() {
     
@@ -13,8 +12,22 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         
-        val navView = findViewById<BottomNavigationView>(R.id.bottom_nav)
-        val navController = findNavController(R.id.nav_host_fragment)
-        navView.setupWithNavController(navController)
+        // 显示首页
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, HomeFragment())
+                .commit()
+        }
+        
+        // 底部导航点击事件
+        findViewById<android.widget.TextView>(R.id.nav_home).setOnClickListener {
+            switchFragment(HomeFragment())
+        }
+    }
+    
+    private fun switchFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, fragment)
+            .commit()
     }
 }
