@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+    
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.yuechang.ktv.ui.fragment.HomeFragment"
+        android:label="@string/nav_home" />
+    
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.yuechang.ktv.ui.fragment.CategoryFragment"
+        android:label="@string/nav_category" />
+    
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.yuechang.ktv.ui.fragment.SearchFragment"
+        android:label="@string/nav_search" />
+    
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.yuechang.ktv.ui.fragment.ProfileFragment"
+        android:label="@string/nav_profile" />
+        
+</navigation>
